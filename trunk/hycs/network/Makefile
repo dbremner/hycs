@@ -3,21 +3,18 @@
 #
 #
 #
-SHELL = cmd.exe
-
-#
-CSC = csc.exe
+include ../make.inc
 
 #
 BINDIR = ../bin
 
 #
-CS_FLAGS = /nologo /target:winexe
+CS_FLAGS +=
 
 #
 SOURCES = \
-    helloForm.cs \
-    screensave.cs
+    minicrawler.cs \
+    ping.cs
 
 TARGETS = $(SOURCES:.cs=.exe)
     
