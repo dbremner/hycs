@@ -6,7 +6,7 @@
 include ./make.inc
 
 #
-SUBDIRS = console dll form dp basic
+SUBDIRS = console dll form dp basic 2d network gdiplus
 
 default :
 	for /d %%x in (${SUBDIRS}) do make -C %%x
@@ -14,4 +14,4 @@ default :
 .PHONY : clean
 clean:
 	for /d %%x in (${SUBDIRS}) do make clean -C %%x
-	rm -vf ./bin/*
+	rm -vf ./bin/*.exe ./bin/*.dll

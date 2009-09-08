@@ -16,8 +16,7 @@ CS_FLAGS = /nologo /target:winexe
 
 #
 SOURCES = \
-    helloForm.cs \
-    screensave.cs
+    helloImage.cs
 
 TARGETS = $(SOURCES:.cs=.exe)
     
