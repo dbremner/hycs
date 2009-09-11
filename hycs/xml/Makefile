@@ -9,11 +9,11 @@ include ../make.inc
 BINDIR = ../bin
 
 #
-CS_FLAGS +=
+CS_FLAGS += /doc:helloXML.xml
 
 #
 SOURCES = \
-    helloConsole.cs
+    helloXML.cs
 
 TARGETS = $(SOURCES:.cs=.exe)
     
@@ -25,5 +25,5 @@ default : $(TARGETS)
 
 .PHONY : clean
 clean:
-	rm -vf $(TARGETS)
+	rm -vf $(TARGETS) *.xml
 

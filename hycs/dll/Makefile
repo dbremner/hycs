@@ -23,7 +23,12 @@ SOURCES = \
 
 EXECUTIVES = $(SOURCES:.cs=.exe)
 
-default : $(LIBRARIES) $(EXECUTIVES)
+NATIVE_SRCS = \
+   nativeDLL.c
+
+NAV_LIBRARIES = $(NATIVE_SRCS:.c=.dll)
+
+default : $(LIBRARIES) $(EXECUTIVES) $(NAV_LIBRARIES)
 
 %.dll: %.cs
 	$(CSC) $(LIB_FLAGS) /out:$@ $<
@@ -33,7 +38,10 @@ default : $(LIBRARIES) $(EXECUTIVES)
 	$(CSC) $(CS_FLAGS) /out:$@ $<
 	cp -v $@ $(BINDIR)/$@
 
+$(NAV_LIBRARIES) : $(NATIVE_SRCS)
+	cl /nologo /LD $<
+
 .PHONY : clean
 clean:
-	rm -vf $(EXECUTIVES) $(LIBRARIES)
+	rm -vf $(EXECUTIVES) $(LIBRARIES) $(NAV_LIBRARIES) *.lib *.exp *.obj
 

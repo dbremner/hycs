@@ -6,7 +6,10 @@
 include ./make.inc
 
 #
-SUBDIRS = console dll form dp basic 2d network gdiplus
+SUBDIRS = console dll form dp basic   \
+          2d network gdiplus xml      \
+          exception threading interop \
+          
 
 default :
 	for /d %%x in (${SUBDIRS}) do make -C %%x

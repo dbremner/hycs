@@ -24,6 +24,7 @@ class HelloForm : Form
         this.ControlBox = true;
         this.MaximizeBox = false;
         this.MinimizeBox = false;
+        this.BackColor = Color.Red;
 
         btnOK = new Button();
         btnOK.Text = "OK";
