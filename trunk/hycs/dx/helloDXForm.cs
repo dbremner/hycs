@@ -18,14 +18,14 @@ class HelloDXForm : Form
 
         this.Load += new EventHandler(Form_Load);
     }
-    
+
     void InitGraphics()
     {
        PresentParameters present_params = new PresentParameters();
-      
+
        present_params.Windowed = true;
        present_params.SwapEffect = SwapEffect.Discard;
-      
+
 
        m_device = new Device(0, DeviceType.Hardware, this,
             CreateFlags.SoftwareVertexProcessing, present_params);

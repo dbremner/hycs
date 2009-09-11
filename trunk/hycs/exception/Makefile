@@ -13,7 +13,7 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    helloConsole.cs
+    helloException.cs
 
 TARGETS = $(SOURCES:.cs=.exe)
     
@@ -25,5 +25,5 @@ default : $(TARGETS)
 
 .PHONY : clean
 clean:
-	rm -vf $(TARGETS)
+	rm -vf $(TARGETS) *.txt
 
