@@ -13,7 +13,11 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    delegate.cs
+    delegate.cs \
+    strategy.cs \
+    proxy.cs    \
+    interpreter.cs \
+
 
 TARGETS = $(SOURCES:.cs=.exe)
     
