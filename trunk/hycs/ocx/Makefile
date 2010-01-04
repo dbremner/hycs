@@ -13,8 +13,7 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    property.cs \
-    datatype.cs \
+    flash.cs \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
