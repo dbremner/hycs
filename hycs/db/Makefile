@@ -13,9 +13,7 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    property.cs \
-    datatype.cs \
-    indexer.cs  \
+    oledb.cs \
 
 
 TARGETS = $(SOURCES:.cs=.exe)

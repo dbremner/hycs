@@ -38,7 +38,7 @@ class DataType
         int i = 10;
         int j = new int();
 
-        System.Console.WriteLine("i = {0:D}, j = {1:D}", i, j);
+        System.Console.WriteLine("i = {0}, j = {1}", i, j);
 
         System.Console.ReadKey();
     }
