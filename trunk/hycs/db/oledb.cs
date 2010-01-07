@@ -7,7 +7,7 @@ public class MainClass {
     public static void Main ()
     {
             // Set Access connection and select strings.
-            // The path to BugTypes.MDB must be changed if you build 
+            // The path to BugTypes.MDB must be changed if you build
             // the sample from the command line:
 #if USINGPROJECTSYSTEM
             string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\db1.mdb";
@@ -15,7 +15,7 @@ public class MainClass {
             string strAccessConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db1.mdb";
 #endif
             string strAccessSelect = "SELECT * FROM Users";
- 
+
             // Create the dataset and add the Users table to it:
             DataSet myDataSet = new DataSet();
             OleDbConnection myAccessConn = null;
@@ -28,16 +28,16 @@ public class MainClass {
                   Console.WriteLine("Error: Failed to create a database connection. \n{0}", ex.Message);
                   return;
             }
- 
+
             try
             {
-            
-                  OleDbCommand myAccessCommand = new OleDbCommand(strAccessSelect,myAccessConn);
+
+                  OleDbCommand myAccessCommand = new OleDbCommand(strAccessSelect, myAccessConn);
                   OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(myAccessCommand);
- 
+
                   myAccessConn.Open();
-                  myDataAdapter.Fill(myDataSet,"Users");
- 
+                  myDataAdapter.Fill(myDataSet, "Users");
+
             }
             catch (Exception ex)
             {
@@ -48,15 +48,15 @@ public class MainClass {
             {
                   myAccessConn.Close();
             }
- 
+
             // A dataset can contain multiple tables, so let's get them
             // all into an array:
             DataTableCollection dta = myDataSet.Tables;
             foreach (DataTable dt in dta)
             {
-            Console.WriteLine("Found data table {0}", dt.TableName);
+                Console.WriteLine("Found data table {0}", dt.TableName);
             }
-          
+
             // The next two lines show two different ways you can get the
             // count of tables in a dataset:
             Console.WriteLine("{0} tables in data set", myDataSet.Tables.Count);

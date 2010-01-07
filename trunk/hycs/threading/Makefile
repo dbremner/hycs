@@ -13,7 +13,11 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    helloThread.cs
+    helloThread.cs \
+    monitor.cs     \
+    mutex.cs       \
+    threadpool.cs  \
+
 
 TARGETS = $(SOURCES:.cs=.exe)
     

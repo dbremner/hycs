@@ -9,7 +9,7 @@ namespace huys
             /// <remarks>Demo for simple 1+1.</remarks>
             public static long add(long a, long b)
             {
-                return (a + b); 
+                return (a + b);
             }
         }
     }

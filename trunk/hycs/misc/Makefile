@@ -13,12 +13,8 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    property.cs \
-    datatype.cs \
-    indexer.cs  \
-    array.cs    \
-    struct.cs   \
-    generic.cs  \
+    consoleHandler.cs  \
+
 
 TARGETS = $(SOURCES:.cs=.exe)
     
@@ -30,5 +26,5 @@ default : $(TARGETS)
 
 .PHONY : clean
 clean:
-	rm -vf $(TARGETS)
+	rm -vf $(TARGETS) *.txt
 

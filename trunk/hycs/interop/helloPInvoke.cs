@@ -8,7 +8,7 @@ class HelloPlatformInvoke
     [DllImport("msvcrt.dll")]
     internal static extern int _flushall();
 
-    public static void Main() 
+    public static void Main()
     {
         puts("Test");
         _flushall();

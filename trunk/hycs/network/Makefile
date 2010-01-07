@@ -14,7 +14,10 @@ CS_FLAGS +=
 #
 SOURCES = \
     minicrawler.cs \
-    ping.cs
+    ping.cs        \
+    ipaddr.cs      \
+    webclient.cs   \
+
 
 TARGETS = $(SOURCES:.cs=.exe)
     
