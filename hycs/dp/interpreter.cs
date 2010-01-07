@@ -7,51 +7,51 @@ class MainApp
     {
         Context context = new Context();
 
-        // Usually a tree 
-        ArrayList list = new ArrayList(); 
+        // Usually a tree
+        ArrayList list = new ArrayList();
 
-        // Populate 'abstract syntax tree' 
+        // Populate 'abstract syntax tree'
         list.Add(new TerminalExpression());
         list.Add(new NonterminalExpression());
         list.Add(new TerminalExpression());
         list.Add(new TerminalExpression());
 
-        // Interpret 
+        // Interpret
         foreach (AbstractExpression exp in list)
         {
             exp.Interpret(context);
         }
 
-        // Wait for user 
+        // Wait for user
         Console.Read();
     }
 }
 
-// "Context" 
-class Context 
+// "Context"
+class Context
 {
 }
 
-// "AbstractExpression" 
-abstract class AbstractExpression 
+// "AbstractExpression"
+abstract class AbstractExpression
 {
     public abstract void Interpret(Context context);
 }
 
-// "TerminalExpression" 
+// "TerminalExpression"
 class TerminalExpression : AbstractExpression
 {
-    public override void Interpret(Context context)  
+    public override void Interpret(Context context)
     {
         Console.WriteLine("Called Terminal.Interpret()");
     }
 }
 
-// "NonterminalExpression" 
+// "NonterminalExpression"
 class NonterminalExpression : AbstractExpression
 {
-    public override void Interpret(Context context)  
+    public override void Interpret(Context context)
     {
         Console.WriteLine("Called Nonterminal.Interpret()");
-    }  
+    }
 }

@@ -3,7 +3,7 @@ using System;
 /// <summary>
 /// Class level summary documentation goes here.</summary>
 /// <remarks>
-/// Longer comments can be associated with a type or member 
+/// Longer comments can be associated with a type or member
 /// through the remarks tag</remarks>
 public class SomeClass
 {
@@ -17,20 +17,20 @@ public class SomeClass
    {
        // TODO: Add Constructor Logic here
    }
-   
+
    /// <summary>
    /// Name property </summary>
    /// <value>
    /// A value tag is used to describe the property value</value>
    public string Name
    {
-      get 
+      get
       {
          if ( myName == null )
          {
             throw new Exception("Name is null");
          }
-             
+
          return myName;
       }
    }
@@ -39,7 +39,7 @@ public class SomeClass
    /// Description for SomeMethod.</summary>
    /// <param name="s"> Parameter description for s goes here</param>
    /// <seealso cref="String">
-   /// You can use the cref attribute on any tag to reference a type or member 
+   /// You can use the cref attribute on any tag to reference a type or member
    /// and the compiler will check that the reference exists. </seealso>
    public void SomeMethod(string s)
    {
