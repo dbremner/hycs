@@ -3,24 +3,18 @@
 #
 #
 #
-SHELL = cmd.exe
-
-#
-CSC = csc.exe
+include ../make.inc
 
 #
 BINDIR = ../bin
 
 #
-CS_FLAGS = /nologo /target:winexe
+CS_FLAGS += /res:StringTable.resources
 
 #
 SOURCES = \
-    helloForm.cs  \
-    screensave.cs \
-    checkbox.cs   \
-    clickme.cs    \
-    layout.cs     \
+    resource.cs \
+    string.cs   \
 
 
 TARGETS = $(SOURCES:.cs=.exe)

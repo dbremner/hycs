@@ -9,7 +9,7 @@ include ./make.inc
 SUBDIRS = console dll form dp basic   \
           2d network gdiplus xml      \
           exception threading interop \
-          regex office devel
+          regex office devel resx
 
 
 default :
