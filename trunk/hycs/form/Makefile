@@ -21,6 +21,10 @@ SOURCES = \
     checkbox.cs   \
     clickme.cs    \
     layout.cs     \
+    treeview.cs   \
+    processbar.cs \
+    holes.cs      \
+    hexview.cs    \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
