@@ -1,0 +1,4 @@
+#=============
+# String Table
+#=============
+Message = The button has been clicked.
