@@ -9,10 +9,10 @@ class MainClass
   {
     Trace.WriteLine("My Trace String");
     Trace.Flush();
-    
+
     int i = 0;
     Trace.Assert((i == 1), "My Trace Assertion");
-    
+
     Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
     Trace.WriteLine("My Trace to the console");
   }

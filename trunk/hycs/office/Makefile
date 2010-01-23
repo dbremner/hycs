@@ -17,6 +17,7 @@ CS_FLAGS += /reference:Office.dll  \
 SOURCES = \
     excel_open.cs  \
     excel_start.cs \
+    excel_create.cs \
     word_open.cs   \
 
 

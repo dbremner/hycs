@@ -17,6 +17,7 @@ SOURCES = \
     ping.cs        \
     ipaddr.cs      \
     webclient.cs   \
+    sendmail.cs    \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
