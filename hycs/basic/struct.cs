@@ -1,4 +1,5 @@
 using System;
+
 struct SimpleStruct
 {
     private int xval;
