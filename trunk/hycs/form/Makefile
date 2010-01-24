@@ -25,6 +25,11 @@ SOURCES = \
     processbar.cs \
     holes.cs      \
     hexview.cs    \
+    listbox.cs    \
+    listview.cs   \
+    native.cs     \
+    explorer.cs   \
+    colorlistbox.cs \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
