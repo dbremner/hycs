@@ -16,6 +16,8 @@ SOURCES = \
     split.cs   \
     reverse.cs \
     xmltag.cs  \
+    tgrep.cs   \
+
 
 TARGETS = $(SOURCES:.cs=.exe)
 

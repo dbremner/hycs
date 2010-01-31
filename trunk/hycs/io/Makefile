@@ -9,13 +9,11 @@ include ../make.inc
 BINDIR = ../bin
 
 #
-CS_FLAGS += /res:StringTable.resx
+CS_FLAGS +=
 
 #
 SOURCES = \
-    resource.cs \
-    string.cs   \
-
+    redirectIO.cs \
 
 TARGETS = $(SOURCES:.cs=.exe)
     
@@ -24,13 +22,6 @@ default : $(TARGETS)
 %.exe : %.cs
 	$(CSC) $(CS_FLAGS) /out:$@ $<
 	cp -v $@ $(BINDIR)/$@
-    
-resource.exe : resource.cs StringTable.resx
-	$(CSC) $(CS_FLAGS) /out:$@ $<
-	cp -v $@ $(BINDIR)/$@
-
-%.resx : %.txt
-	resgen $< $@
 
 .PHONY : clean
 clean:

@@ -13,7 +13,8 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    helloConsole.cs
+    helloConsole.cs \
+    echoConsole.cs  \
 
 TARGETS = $(SOURCES:.cs=.exe)
     
