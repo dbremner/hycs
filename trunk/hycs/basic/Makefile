@@ -19,6 +19,10 @@ SOURCES = \
     array.cs    \
     struct.cs   \
     generic.cs  \
+    types.cs    \
+    boxing.cs   \
+    operator.cs \
+    
 
 TARGETS = $(SOURCES:.cs=.exe)
     
