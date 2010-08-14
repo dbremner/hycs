@@ -19,6 +19,7 @@ SOURCES = \
     excel_start.cs \
     excel_create.cs \
     word_open.cs   \
+	excel_report.cs \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
