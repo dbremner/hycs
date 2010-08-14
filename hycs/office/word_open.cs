@@ -23,8 +23,6 @@ namespace WordMan
 
             AddSimpleHeader(oword, "Hello From C#", WdParagraphAlignment.wdAlignParagraphCenter);
 
-            //AddSimpleTable
-
         }
 
         public static void AddSimpleHeader(Word.Application WordApp, string HeaderText)

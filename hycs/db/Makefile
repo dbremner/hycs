@@ -14,6 +14,7 @@ CS_FLAGS +=
 #
 SOURCES = \
     oledb.cs \
+    myexcel.cs \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
