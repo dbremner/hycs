@@ -1,12 +1,8 @@
 #
-#
-#
-#
-#
-include ../make.inc
+TOPDIR = ..
 
 #
-BINDIR = ../bin
+include $(TOPDIR)/make.inc
 
 #
 CS_FLAGS += /reference:Office.dll  \
@@ -19,18 +15,14 @@ SOURCES = \
     excel_start.cs \
     excel_create.cs \
     word_open.cs   \
-	excel_report.cs \
+    excel_report.cs \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
 
 default : $(TARGETS)
 
-%.exe : %.cs
-	$(CSC) $(CS_FLAGS) /out:$@ $<
-	cp -v $@ $(BINDIR)/$@
-
 .PHONY : clean
 clean:
-	rm -vf $(TARGETS) *.txt
+	$(RM) $(TARGETS) *.txt
 

@@ -15,5 +15,8 @@ class MainClass
 
     Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
     Trace.WriteLine("My Trace to the console");
+
+    Console.WriteLine("Press any key to continue...");
+    Console.ReadKey();
   }
 }

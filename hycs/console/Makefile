@@ -1,12 +1,8 @@
 #
-#
-#
-#
-#
-include ../make.inc
+TOPDIR = ..
 
 #
-BINDIR = ../bin
+include $(TOPDIR)/make.inc
 
 #
 CS_FLAGS +=
@@ -17,14 +13,10 @@ SOURCES = \
     echoConsole.cs  \
 
 TARGETS = $(SOURCES:.cs=.exe)
-    
-default : $(TARGETS)
 
-%.exe : %.cs
-	$(CSC) $(CS_FLAGS) /out:$@ $<
-	cp -v $@ $(BINDIR)/$@
+default : $(TARGETS)
 
 .PHONY : clean
 clean:
-	rm -vf $(TARGETS)
+	$(RM) $(TARGETS)
 

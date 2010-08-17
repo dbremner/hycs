@@ -1,12 +1,9 @@
 #
+TOPDIR = ..
 #
 #
 #
-#
-include ../make.inc
-
-#
-BINDIR = ../bin
+include $(TOPDIR)/make.inc
 
 #
 CS_FLAGS += /res:StringTable.resx

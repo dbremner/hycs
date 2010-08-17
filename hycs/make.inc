@@ -1,7 +1,9 @@
+################################################################
 #
 #
 #
-#
+################################################################
+
 #
 SHELL = cmd.exe
 
@@ -9,4 +11,17 @@ SHELL = cmd.exe
 CSC = csc.exe
 
 #
-CS_FLAGS = /nologo
+RM = rm -vf
+
+#
+BINDIR = $(TOPDIR)/bin
+ICODIR = $(TOPDIR)/ico
+
+#
+CS_FLAGS = /nologo /win32icon:$(ICODIR)/hycs.ico
+
+%.exe : %.cs
+	$(CSC) $(CS_FLAGS) /out:$@ $<
+	cp -v $@ $(BINDIR)/$@
+
+
