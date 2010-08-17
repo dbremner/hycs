@@ -1,12 +1,8 @@
 #
-#
-#
-#
-#
-include ../make.inc
+TOPDIR = ..
 
 #
-BINDIR = ../bin
+include $(TOPDIR)/make.inc
 
 #
 CS_FLAGS += /reference:helloDLL.dll
@@ -34,14 +30,10 @@ default : $(LIBRARIES) $(EXECUTIVES) $(NAV_LIBRARIES)
 	$(CSC) $(LIB_FLAGS) /out:$@ $<
 	cp -v $@ $(BINDIR)/$@
 
-%.exe: %.cs
-	$(CSC) $(CS_FLAGS) /out:$@ $<
-	cp -v $@ $(BINDIR)/$@
-
 $(NAV_LIBRARIES) : $(NATIVE_SRCS)
 	cl /nologo /LD $<
 
 .PHONY : clean
 clean:
-	rm -vf $(EXECUTIVES) $(LIBRARIES) $(NAV_LIBRARIES) *.lib *.exp *.obj
+	$(RM) $(EXECUTIVES) $(LIBRARIES) $(NAV_LIBRARIES) *.lib *.exp *.obj
 

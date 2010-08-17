@@ -1,18 +1,11 @@
 #
-#
-#
-#
-#
-SHELL = cmd.exe
+TOPDIR = ..
 
 #
-CSC = csc.exe
+include $(TOPDIR)/make.inc
 
 #
-BINDIR = ../bin
-
-#
-CS_FLAGS = /nologo /target:winexe
+CS_FLAGS += /target:winexe
 
 #
 SOURCES = \
@@ -33,14 +26,10 @@ SOURCES = \
 
 
 TARGETS = $(SOURCES:.cs=.exe)
-    
-default : $(TARGETS)
 
-%.exe : %.cs
-	$(CSC) $(CS_FLAGS) /out:$@ $<
-	cp -v $@ $(BINDIR)/$@
+default : $(TARGETS)
 
 .PHONY : clean
 clean:
-	rm -vf $(TARGETS)
+	$(RM) $(TARGETS)
 

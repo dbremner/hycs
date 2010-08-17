@@ -7,7 +7,7 @@ class MainClass
     {
         string logFile = "LOGFILE.TXT";
 
-        FileStream fs = new FileStream(logFile, FileMode.OpenOrCreate, FileAccess.Write);
+        FileStream fs = new FileStream(logFile, FileMode.OpenOrCreate, FileAccess.Write | FileAccess.Read);
 
         StreamWriter sw = new StreamWriter(fs);
         StreamReader sr = new StreamReader(fs);
@@ -23,5 +23,8 @@ class MainClass
         sw.Close();
         sr.Close();
         fs.Close();
+
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 }
