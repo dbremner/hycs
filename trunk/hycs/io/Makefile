@@ -10,6 +10,7 @@ CS_FLAGS +=
 #
 SOURCES = \
     redirectIO.cs \
+    readfile.cs
 
 TARGETS = $(SOURCES:.cs=.exe)
 

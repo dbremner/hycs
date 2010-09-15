@@ -9,7 +9,7 @@ CS_FLAGS +=
 
 #
 SOURCES = \
-    consoleHandler.cs  \
+    hello_linq.cs  \
 
 
 TARGETS = $(SOURCES:.cs=.exe)

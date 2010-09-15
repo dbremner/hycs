@@ -5,7 +5,9 @@ public class ReadFileDemo
 {
     public static void Main()
     {
-        string contents = System.IO.File.ReadAllText(@"C:\t1");
-        Console.Out.WriteLine("contents = " + contents);
+        string cwd = Directory.GetCurrentDirectory();
+        string content = System.IO.File.ReadAllText(cwd + "\\Makefile");
+        Console.Out.WriteLine("=== content ===");
+        Console.WriteLine(content);
     }
 }
