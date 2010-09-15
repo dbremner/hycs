@@ -20,13 +20,22 @@ class CheckBoxForm : Form
         ckbox.Top = this.ClientRectangle.Height - ckbox.Height - 100;
         ckbox.Appearance = Appearance.Button;
         ckbox.BackColor = Color.Red;
-        ckbox.Click += new EventHandler(ckbox_Click);
+        ckbox.CheckState = CheckState.Unchecked;
+        //ckbox.Click += new EventHandler(ckbox_Click);
+        ckbox.CheckStateChanged += new EventHandler(ckbox_Click);
         this.Controls.Add(ckbox);
     }
 
     private void ckbox_Click(object sender, EventArgs e)
     {
-        this.ckbox.Text = "On";
+        if (!ckbox.Checked)
+        {
+            this.ckbox.Text = "Off";
+        }
+        else
+        {
+            this.ckbox.Text = "On";
+        }
     }
 
     public static void Main()

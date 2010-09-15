@@ -18,7 +18,11 @@ BINDIR = $(TOPDIR)/bin
 ICODIR = $(TOPDIR)/ico
 
 #
-CS_FLAGS = /nologo /win32icon:$(ICODIR)/hycs.ico
+#MYICON = $(ICODIR)/hycs.ico
+MYICON = $(ICODIR)/alter.ico
+
+#
+CS_FLAGS = /nologo /win32icon:$(MYICON)
 
 %.exe : %.cs
 	$(CSC) $(CS_FLAGS) /out:$@ $<
