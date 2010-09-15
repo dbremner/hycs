@@ -26,7 +26,7 @@ namespace WindowsApplication1
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                msg(ex.ToString());
             }
         }
     }
