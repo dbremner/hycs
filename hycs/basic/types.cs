@@ -26,5 +26,9 @@ public class EntryPoint //this is a reference type
  
         ModifyCoord( ref location ); 
         System.Console.WriteLine( "( {0}, {1} )", location.x, location.y ); 
+        
+        
+        System.Console.WriteLine("Press any key to continue...");
+        System.Console.ReadKey();
     } 
 }

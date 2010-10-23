@@ -21,5 +21,8 @@ public class Redirect
             System.Console.Out.WriteLine(s);
         }
         System.Console.Out.Close(); // Remember this!
+
+        System.Console.WriteLine("Press any key to continue...");
+        System.Console.ReadKey();
     }
 }

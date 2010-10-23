@@ -1,6 +1,6 @@
 delegate void Profession();
 
-class ProfessionSpeaker{
+class ProfessionSpeaker {
 
     static void StaticSpeaker(){
         System.Console.WriteLine("Medicine");

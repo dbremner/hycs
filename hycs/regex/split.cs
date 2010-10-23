@@ -11,5 +11,8 @@ class MainClass
         {
             Console.WriteLine("Word: {0}", sub);
         }
+        
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 }

@@ -6,11 +6,22 @@ using System.IO;
 
 namespace WindowsApplication1
 {
-    public partial class Form1 : Form
+    /// <summary>
+    ///    Class Form1.
+    /// </summary>
+    public class Form1 : Form
     {
+        /// <summary>
+        ///    Ctor.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
+        }
+        
+        private void InitializeComponent()
+        {
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,6 +39,13 @@ namespace WindowsApplication1
                 str = xmlnode[i].ChildNodes.Item(0).InnerText.Trim() + " | " + xmlnode[i].ChildNodes.Item(1).InnerText.Trim() + " | " + xmlnode[i].ChildNodes.Item(2).InnerText.Trim();
                 MessageBox.Show (str);
             }
+        }
+        
+        /// <summary>
+        ///    The main entry point for the application.
+        /// </summary>
+        public static void Main(string[] args) {
+            Application.Run(new Form1());
         }
     }
 }

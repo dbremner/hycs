@@ -16,5 +16,8 @@ public class MainClass
         string replace = @"${part4}.${part3}.${part2}.${part1}" +
                          @" (the reverse of $&)";
         Console.WriteLine( regex.Replace("192.168.123.1", replace) );
+        
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 }

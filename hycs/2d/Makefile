@@ -9,7 +9,9 @@ CS_FLAGS += /target:winexe
 
 #
 SOURCES = \
-    helloImage.cs
+    helloImage.cs \
+    ruler.cs      \
+    scribble.cs   \
 
 TARGETS = $(SOURCES:.cs=.exe)
 

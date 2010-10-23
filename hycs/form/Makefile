@@ -23,6 +23,7 @@ SOURCES = \
     native.cs     \
     explorer.cs   \
     colorlistbox.cs \
+    msgbox.cs     \
 
 
 TARGETS = $(SOURCES:.cs=.exe)

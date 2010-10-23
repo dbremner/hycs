@@ -1,13 +1,9 @@
-//Code revised from
-//C# 2.0 The Complete Reference
-// 
 using System;
 using System.Net;
 using System.IO;
 
 class MiniCrawler
 {
-
     static string FindLink(string htmlstr, ref int startloc)
     {
         int i;

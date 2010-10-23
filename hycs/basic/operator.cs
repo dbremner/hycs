@@ -30,7 +30,7 @@ public class EntryPoint
                            boxed is ValueType ? "is" : "isnot" );    
     }
  
-    static void Main() { 
+    public static void Main() { 
 
         test_is();
                            
@@ -58,5 +58,8 @@ public class EntryPoint
         } else { 
             Console.WriteLine( "Conversion Failed" ); 
         }
+
+        System.Console.WriteLine("Press any key to continue...");
+        System.Console.ReadKey();
     }    
 }

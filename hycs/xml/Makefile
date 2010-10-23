@@ -9,7 +9,8 @@ CS_FLAGS += /doc:helloXML.xml
 
 #
 SOURCES = \
-    helloXML.cs
+    helloXML.cs \
+    readXML.cs  \
 
 TARGETS = $(SOURCES:.cs=.exe)
 

@@ -39,7 +39,11 @@ class DataType
         int j = new int();
 
         System.Console.WriteLine("i = {0}, j = {1}", i, j);
+        
+        
+        
 
+        System.Console.WriteLine("Press any key to continue...");
         System.Console.ReadKey();
     }
 }

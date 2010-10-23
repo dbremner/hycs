@@ -26,6 +26,7 @@ class HelloForm : Form
         this.MinimizeBox = false;
         this.BackColor = Color.Red;
         //this.icon = new Icon();
+        this.ResizeRedraw = true;
 
         btnOK = new Button();
         btnOK.Text = "OK";
@@ -56,6 +57,7 @@ class HelloForm : Form
 
         this.Load += new EventHandler(Form_Load);
         this.Click += new EventHandler(Form_Click);
+        this.Paint += new PaintEventHandler(mypainterhandler);
     }
 
     private void btnOK_Click(object sender, EventArgs eArgs)
@@ -73,6 +75,30 @@ class HelloForm : Form
         MessageBox.Show("You Click me!", "hello", MessageBoxButtons.OK);
     }
 
+    static void mypainterhandler(object sender, PaintEventArgs e)
+    {
+        Graphics grfx = e.Graphics;
+        grfx.FillRectangle(Brushes.Blue, new Rectangle(0, 0, 20, 20));
+    }
+
+    protected override void OnMove(EventArgs ea)
+    {
+        Invalidate();
+    }
+
+    protected override void OnResize(EventArgs ea)
+    {
+        Invalidate();
+    }
+
+    protected override void OnKeyDown(KeyEventArgs kea)
+    {
+        if (kea.KeyCode == Keys.Escape)
+        {
+            this.Close();
+        }
+    }
+    
     public static void Main()
     {
         Application.Run(new HelloForm());

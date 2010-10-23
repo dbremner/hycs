@@ -1,6 +1,6 @@
 public class EntryPoint 
 { 
-    static void Main() { 
+    public static void Main() { 
         int employeeID = 303; 
         object boxedID = employeeID; 
          
@@ -8,6 +8,9 @@ public class EntryPoint
         int unboxedID = (int) boxedID; 
  
         System.Console.WriteLine( employeeID.ToString() ); 
-        System.Console.WriteLine( unboxedID.ToString() ); 
+        System.Console.WriteLine( unboxedID.ToString() );
+
+        System.Console.WriteLine("Press any key to continue...");
+        System.Console.ReadKey();
     } 
 }

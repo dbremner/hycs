@@ -37,7 +37,7 @@ class HelloGDIPlus : Form
         base.Dispose(disposing);
     }
 
-    protected void OnPaint(object sender, System.Windows.Forms.PaintEventArgs e)
+    protected void OnPaint(object sender, PaintEventArgs e)
     {
         GraphicsUnit gUnit = GraphicsUnit.Pixel;
 

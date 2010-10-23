@@ -26,5 +26,8 @@ class MainClass
                 Console.WriteLine("Error ({0})", ex.InnerException.Message);
             }
         }
+
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 }
