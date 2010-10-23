@@ -12,6 +12,8 @@ class HelloPlatformInvoke
     {
         puts("Test");
         _flushall();
+
+        System.Console.WriteLine("Press any key to continue...");
         System.Console.ReadKey();
     }
 }

@@ -23,7 +23,8 @@ class MainApp
         }
 
         // Wait for user
-        Console.Read();
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 }
 

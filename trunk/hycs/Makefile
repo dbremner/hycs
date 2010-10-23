@@ -10,7 +10,8 @@ SUBDIRS = console dll form dp basic   \
           2d network gdiplus xml      \
           exception threading interop \
           regex office devel resx io  \
-          db \
+          db ntservice crypto system\
+          linq
 
 
 default :

@@ -8,6 +8,9 @@ class TGrep
     {
         TGrep tg = new TGrep(args[0]);
         tg.ApplyToFiles(args[1]);
+        
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 
     Regex re;

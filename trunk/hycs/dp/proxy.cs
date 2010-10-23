@@ -3,14 +3,15 @@ using System;
 // MainApp test application 
 class MainApp
 {
-    static void Main()
+    public static void Main()
     {
         // Create proxy and request a service 
         Proxy proxy = new Proxy();
         proxy.Request();
 
         // Wait for user 
-        Console.Read();
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
     }
 }
 

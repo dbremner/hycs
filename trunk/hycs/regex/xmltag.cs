@@ -14,6 +14,9 @@ public class MainClass{
 
         Console.WriteLine(r1.IsMatch(s0));
         Console.WriteLine(r1.IsMatch(s1));
+        
+        Console.WriteLine("Press any key to continue...");
+        Console.ReadKey();
    }
 }
 

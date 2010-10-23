@@ -1,4 +1,5 @@
 using System;
+using System.Xml;
 
 /// <summary>
 /// Class level summary documentation goes here.</summary>
@@ -7,63 +8,68 @@ using System;
 /// through the remarks tag</remarks>
 public class SomeClass
 {
-   /// <summary>
-   /// Store for the name property</summary>
-   private string myName = null;
+    /// <summary>
+    /// Store for the name property</summary>
+    private string myName = null;
 
-   /// <summary>
-   /// The class constructor. </summary>
-   public SomeClass()
-   {
-       // TODO: Add Constructor Logic here
-   }
+    /// <summary>
+    /// The class constructor. </summary>
+    public SomeClass()
+    {
+        // TODO: Add Constructor Logic here
+    }
 
-   /// <summary>
-   /// Name property </summary>
-   /// <value>
-   /// A value tag is used to describe the property value</value>
-   public string Name
-   {
-      get
-      {
-         if ( myName == null )
-         {
-            throw new Exception("Name is null");
-         }
+    /// <summary>
+    /// Name property </summary>
+    /// <value>
+    /// A value tag is used to describe the property value</value>
+    public string Name
+    {
+        get
+        {
+            if (myName == null)
+            {
+                throw new Exception("Name is null");
+            }
 
-         return myName;
-      }
-   }
+            return myName;
+        }
+    }
 
-   /// <summary>
-   /// Description for SomeMethod.</summary>
-   /// <param name="s"> Parameter description for s goes here</param>
-   /// <seealso cref="String">
-   /// You can use the cref attribute on any tag to reference a type or member
-   /// and the compiler will check that the reference exists. </seealso>
-   public void SomeMethod(string s)
-   {
-   }
+    /// <summary>
+    /// Description for SomeMethod.</summary>
+    /// <param name="s"> Parameter description for s goes here</param>
+    /// <seealso cref="String">
+    /// You can use the cref attribute on any tag to reference a type or member
+    /// and the compiler will check that the reference exists. </seealso>
+    public void SomeMethod(string s)
+    {
+    }
 
-   /// <summary>
-   /// Some other method. </summary>
-   /// <returns>
-   /// Return results are described through the returns tag.</returns>
-   /// <seealso cref="SomeMethod(string)">
-   /// Notice the use of the cref attribute to reference a specific method </seealso>
-   public int SomeOtherMethod()
-   {
-      return 0;
-   }
+    /// <summary>
+    /// Some other method. </summary>
+    /// <returns>
+    /// Return results are described through the returns tag.</returns>
+    /// <seealso cref="SomeMethod(string)">
+    /// Notice the use of the cref attribute to reference a specific method </seealso>
+    public int SomeOtherMethod()
+    {
+        return 0;
+    }
 
-   /// <summary>
-   /// The entry point for the application.
-   /// </summary>
-   /// <param name="args"> A list of command line arguments</param>
-   public static int Main(String[] args)
-   {
-      // TODO: Add code to start application here
+    /// <summary>
+    /// The entry point for the application.
+    /// </summary>
+    /// <param name="args"> A list of command line arguments</param>
+    public static int Main(String[] args)
+    {
+        // TODO: Add code to start application here
+        XmlTextWriter writer = new XmlTextWriter(Console.Out);
+        writer.WriteStartDocument();
+        writer.WriteElementString("Hello", "XML");
+        writer.WriteEndDocument();
+        writer.Close();
 
-       return 0;
-   }
+        return 0;
+    }
 }

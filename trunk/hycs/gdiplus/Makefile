@@ -9,7 +9,8 @@ CS_FLAGS += /target:winexe
 
 #
 SOURCES = \
-    helloGDIPlus.cs
+    helloGDIPlus.cs \
+    helloPrinter.cs \
 
 TARGETS = $(SOURCES:.cs=.exe)
 

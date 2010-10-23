@@ -2,8 +2,6 @@ using System.Runtime.InteropServices;
 using System;
 using huys.DLL;
 
-
-
 class TestDLL
 {
     [DllImport("nativeDLL.dll", CallingConvention = CallingConvention.StdCall)]
