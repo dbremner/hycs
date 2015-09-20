@@ -1,0 +1,1 @@
+This project includes the collection of csharp exercise programs that I written using various usage of C# language. Just for learning and practising.
